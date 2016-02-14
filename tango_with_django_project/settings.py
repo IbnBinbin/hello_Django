@@ -34,6 +34,8 @@ ALLOWED_HOSTS = []
 
 TEMPLATE_DIRS = (TEMPLATE_PATH,)
 
+LOGIN_URL = '/rango/login/'
+
 # Application definition
 
 INSTALLED_APPS = (
@@ -55,6 +57,11 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+)
+
+PASSWORD_HASHERS = (
+'django.contrib.auth.hashers.PBKDF2PasswordHasher',
+'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
 )
 
 ROOT_URLCONF = 'tango_with_django_project.urls'
