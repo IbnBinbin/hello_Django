@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-{% load static %}
+{% extends 'base.html' %}
 
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>About!</title>
-</head>
-<body>
+{% load staticfiles %}
+
+{% block title %}About{% endblock %}
+
+{% block body_block %}
+
     <h1>Who am I?</h1>
     <img src="{% static "images/me.png" %}" alt="Mes" />
 
-</body>
-</html>
+{% endblock %}
